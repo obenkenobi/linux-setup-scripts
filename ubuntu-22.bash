@@ -10,7 +10,7 @@ source ./bashrc
 
 # Install common deps
 sudo apt update
-sudo apt -y install curl git vim openssl
+sudo apt -y install curl git vim openssl neovim
 
 # install asdf 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
@@ -30,4 +30,8 @@ asdf global erlang latest
 sudo apt-get install unzip
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf install elixir latest
-asdf global elixir latest                      
+asdf global elixir latest     
+
+# Install elixir ls
+git clone https://github.com/elixir-lsp/elixir-ls
+mv elixir-ls .elixir-ls
