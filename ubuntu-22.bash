@@ -35,3 +35,13 @@ asdf global elixir latest
 # Install elixir ls
 git clone https://github.com/elixir-lsp/elixir-ls
 mv elixir-ls .elixir-ls
+cd .elixir-ls
+mix deps.get
+mix compile
+mix release -o release
+cd ~/
+
+# install tree sitter
+sudo apt install -y libtree-sitter-dev
+
+
